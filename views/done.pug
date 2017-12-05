@@ -1,0 +1,14 @@
+extends layout
+block done
+  h4 Done!
+  blockquote
+    p Your new short url for #{url} is ready to be used.
+    p Type 
+    code(id="addr") https://djorborn-url-shortener-microservice.glitch.me/#{num}
+    p into the address bar
+    
+    p or
+    a(id="link" target="_blank"): button(class="btn") Click Me
+    
+    script.
+      link.href = addr.innerHTML;

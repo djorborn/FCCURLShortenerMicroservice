@@ -1,0 +1,41 @@
+extends layout
+block main
+  div(class="container")
+    style.
+      code {
+        background-color: lightgrey;
+        border-radius: 5px;
+        padding: 2px;
+        margin-right: 2px;
+      }
+    
+    h4 How To:
+    blockquote
+      p Type 
+        code new/
+        after the main address then type the address of the website you would like to shorten.
+      p A valid address would look like ...
+        code http://www.example.com
+      p You will get back a number, enter that after this url in the address bar, in place of 
+        code new/
+        
+      h5 Example
+      code https://djorborn-url-shortener-microservice.glitch.me/new/http://www.gmail.com
+    
+    h4 User Story:
+    blockquote
+      ul
+        li
+          p
+            b User Story:
+            I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.
+        li
+          p
+            b User Story: 
+            If I pass an invalid URL that doesn't follow the valid 
+            code http://www.example.com
+            format the JSON response will contain an error instead.
+        li
+          p
+            b User Story: 
+            When I visit that shortened URL, it will redirect me to my original link.
